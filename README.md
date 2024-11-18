@@ -1,22 +1,35 @@
 # podctl
 
-`podctl` is a command-line tool designed to simplify the management of Kubernetes contexts, namespaces, pods, and containers. With `podctl`, you can easily list and interact with your Kubernetes resources, and execute a shell inside a container with minimal effort.
+`podctl` is a command-line tool designed to simplify executing in containers. With `podctl`, you can easily list and interact with your Kubernetes resources, and execute a shell inside a container with minimal effort.
 
 ## Features
 
-- List Kubernetes contexts
-- List namespaces within a context
-- List pods within a namespace
-- List containers within a pod
-- Execute a shell inside a container
+- Execute a shell inside a container, by interactively going through cluster/namespace/pod
 
 ## Installation
 
 To install `podctl`, you can use the following command:
 
 ```sh
-# Replace with the actual installation command
-curl -sSL https://example.com/install-podctl | sh
+curl -sSL https://github.com/pimvandenbroek/podctl/raw/main/install.sh | sh
+```
+
+#### Alternatively, you can build it yourself
+
+#### Clone repo
+
+```sh
+git clone https://github.com/pimvandenbroek/podctl.git
+cd podctl
+```
+
+#### Install dependencies and build
+
+```sh
+go mod tidy
+go build
+# optional
+go install
 ```
 
 ## Usage

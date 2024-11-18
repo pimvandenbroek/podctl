@@ -24,11 +24,18 @@ fi
 
 # Build the Go application
 echo "Building the application..."
-go build
+go build $REPO_NAME.go
 
 # Optionally, install the binary globally (comment this line if not needed)
 echo "Installing the application globally..."
 #go install
+
+# Clean up: Delete the cloned repository
+echo "Cleaning up the repository..."
+mv $REPO_NAME ../$REPO_NAME.tmp
+cd ..
+rm -rf "$REPO_NAME"
+mv $REPO_NAME.tmp $REPO_NAME
 
 # Output success message
 echo "Go application built and installed successfully!"
