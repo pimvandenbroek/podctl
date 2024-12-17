@@ -1,4 +1,4 @@
-module podctl.go
+module github.com/pimvandenbroek/podctl
 
 go 1.23.1
 
